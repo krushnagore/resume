@@ -9,32 +9,32 @@ export const Hero = () => {
 
 
     return (
-        <header className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 border-b-2 border-slate-800 pb-8 print:border-b-0 print:pb-0">
+        <header className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 border-b-2 border-slate-800 pb-8 print:border-b-0 print:pb-0 print:mb-4">
             <div className="flex-1">
-                <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-2 uppercase tracking-tight">
+                <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-2 uppercase tracking-tight print:text-3xl">
                     {name}
                 </h1>
-                <p className="text-xl md:text-2xl text-slate-600 font-medium mb-4">
+                <p className="text-xl md:text-2xl text-slate-600 font-medium mb-4 print:text-lg print:mb-2">
                     {role}
                 </p>
 
-                <div className="flex flex-wrap gap-4 text-sm md:text-base text-slate-600 mb-6 print:mb-2">
+                <div className="flex flex-wrap gap-4 text-sm md:text-base text-slate-600 mb-6 print:mb-2 print:text-sm print:gap-2">
                     <div className="flex items-center gap-1">
-                        <Phone size={16} />
+                        <Phone size={16} className="print:w-3 print:h-3" />
                         <span>{phone}</span>
                     </div>
                     <div className="flex items-center gap-1">
-                        <Mail size={16} />
+                        <Mail size={16} className="print:w-3 print:h-3" />
                         <a href={`mailto:${email}`} className="hover:text-blue-600 transition-colors">
                             {email}
                         </a>
                     </div>
                     <div className="flex items-center gap-1">
-                        <MapPin size={16} />
+                        <MapPin size={16} className="print:w-3 print:h-3" />
                         <span>{location}</span>
                     </div>
                     <div className="flex items-center gap-1">
-                        <Linkedin size={16} />
+                        <Linkedin size={16} className="print:w-3 print:h-3" />
                         <a
                             href={linkedinUrl}
                             target="_blank"

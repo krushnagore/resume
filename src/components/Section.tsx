@@ -14,9 +14,9 @@ export const Section: React.FC<SectionProps> = ({
     id,
 }) => {
     return (
-        <section id={id} className={`mb-8 ${className}`}>
+        <section id={id} className={`mb-8 ${className} print:mb-4`}>
             {title && (
-                <h2 className="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 mb-4 uppercase tracking-wide print:text-xl print:mb-2 print:pb-1">
+                <h2 className="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 mb-4 uppercase tracking-wide print:text-xl print:mb-2 print:pb-1 print:border-b">
                     {title}
                 </h2>
             )}
