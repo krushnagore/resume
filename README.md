@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Krushna Gore - CV Website
 
-## Getting Started
+High-performance, ATS-friendly personal CV website built with Next.js and Tailwind CSS.
 
-First, run the development server:
+## ⚡ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **ATS-Friendly PDF Generation**: Uses native browser print functionality for structured, selectable text output.
+- **Performance First**: Built on Next.js App Router with minimal client-side JavaScript.
+- **Responsive**: Mobile-friendly layout.
+- **SEO Optimized**: Proper metadata and semantic HTML.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1.  **Install Dependencies**
+    ```bash
+    npm install
+    ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2.  **Run Development Server**
+    ```bash
+    npm run dev
+    ```
+    Open [http://localhost:3000](http://localhost:3000).
 
-## Learn More
+3.  **Build for Production**
+    ```bash
+    npm run build
+    npm start
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+## 📄 PDF Generation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To generate the PDF:
+1.  Click the **Download CV** button on the homepage.
+2.  The browser's print dialog will open.
+3.  Ensure **Destination** is set to **Save as PDF**.
+4.  Ensure **Background graphics** is checked if you want to keep styling details (though the print stylesheet is optimized for clean output regardless).
+5.  Click **Save**.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The generated PDF is text-selectable and ATS-parsable.
