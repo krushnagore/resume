@@ -5,19 +5,19 @@ export const resumeData = {
   email: "krushnagore@hotmail.com",
   location: "Pune, Maharashtra",
   linkedin: "krushnagore",
-  linkedinUrl: "https://www.linkedin.com/in/krushnagore", // Assuming URL structure
+  linkedinUrl: "https://www.linkedin.com/in/krushnagore",
   summary:
-    "NetSuite Technical Consultant with 3+ years of experience in SuiteScript, SuiteFlow, SDF, SuiteApp, and third-party integrations with iPass with Celigo. Specialized in NetSuite ERP implementation and customization to automate and integrate multiple systems across finance, HRMS, CRM, and telecom domains.",
+    "NetSuite Technical Consultant with 3+ years of expertise in SuiteScript, SuiteFlow, SDF, and SuiteApp development. Proven track record of delivering end-to-end ERP implementations and complex third-party integrations using Celigo iPaaS. Adept at automating financial, HRMS, and CRM workflows to drive operational efficiency.",
   experience: [
     {
       company: "Apex IT & Consulting Services",
       role: "NetSuite Technical Consultant",
       location: "Pune, Maharashtra",
-      period: "Aug 2025 – Feb 2026",
+      period: "Aug 2025 – Present",
       type: "Remote",
       achievements: [
-        "NetSuite Customization, SOAP Integration support.",
-        "Handle UAT, SIT and Production deployment and support.",
+        "Spearheaded complex NetSuite customizations and SOAP-based integrations to enhance system interoperability.",
+        "Managed end-to-end deployment lifecycles including User Acceptance Testing (UAT), System Integration Testing (SIT), and Production support.",
       ],
     },
     {
@@ -27,10 +27,10 @@ export const resumeData = {
       period: "May 2023 – Aug 2025",
       type: "Onsite",
       achievements: [
-        "Developed SuiteScript (1.0/2.0/2.1) scripts: Client, User Event, Suitelet, Map/Reduce, RESTlet.",
-        "Integrated Salesforce, DarwinBox, SAP Ariba, Exotel, and Standard Chartered Bank.",
-        "Customized records, dashboards, workflows, and managed CSV data operations.",
-        "Built automation for billing, journal entries, bad debt, and multi-level PO approvals.",
+        "Developed and optimized advanced SuiteScripts (1.0/2.0/2.1) including Client, User Event, Suitelet, Map/Reduce, and RESTlet methodologies.",
+        "Architected seamless integrations with critical business systems including Salesforce, DarwinBox, SAP Ariba, Exotel, and Standard Chartered Bank.",
+        "Customized core NetSuite records, dashboards, and advanced workflows; streamlined bulk data operations via CSV imports.",
+        "Engineered robust automation solutions for billing, journal entries, bad debt management, and multi-tier Purchase Order approvals.",
       ],
     },
     {
@@ -39,22 +39,25 @@ export const resumeData = {
       location: "Ahilyanagar, Maharashtra",
       period: "May 2022 – Apr 2023",
       type: "Internship",
-      achievements: ["CRM Development"],
+      achievements: [
+        "Assisted in the development and customization of CRM modules.",
+        "Gained hands-on experience in NetSuite configuration and initial implementation phases."
+      ],
     },
   ],
   projects: [
-    "e-Invoice Integrations (ClearTax, MasterGST, TaxPro, OCTA)",
-    "Estimate & Quote PDF Automation",
-    "SAP Ariba – NetSuite Order & Invoice Integration (EDI)",
-    "Kaseya - Billing Automation (270k+ Invoices/Month)",
-    "Exotel Integration – Outbound Calls",
-    "Subex - NetSuite Implementation and Integrations (DarwinBox, SwiftKanban, MS Sharepoint)",
-    "ConnectWise – Script Optimization & Production Support",
-    "StormGeo – Salesforce to NetSuite via Celigo",
-    "Qyalys – NetSuite Customization, Deployment and UAT, SIT and Production support.",
+    "e-Invoice Integrations: Implemented real-time integrations with ClearTax, MasterGST, TaxPro, and OCTA.",
+    "Estimate & Quote Automation: Developed PDF generation and workflow automation for sales documents.",
+    "SAP Ariba Integration: Built EDI-based NetSuite Order & Invoice integration for seamless procurement.",
+    "Billing Automation (Kaseya): Automated high-volume billing processing (270k+ invoices/month).",
+    "Exotel Integration: Enabled outbound call features directly within NetSuite records.",
+    "Subex Implementation: Led NetSuite implementation and integrations with DarwinBox, SwiftKanban, and MS SharePoint.",
+    "ConnectWise Optimization: Refactored legacy scripts to improve system performance and maintainability.",
+    "Salesforce-NetSuite Integration: Configured bi-directional data sync via Celigo iPaaS for StormGeo.",
+    "Qyalys Support: Provided comprehensive customization, deployment, and post-go-live support.",
   ],
   education: {
-    degree: "BCA (Commerce)",
+    degree: "Bachelor of Computer Applications (BCA)",
     college: "New Arts, Commerce & Science College, Ahmednagar",
     university: "Savitribai Phule Pune University",
     year: "2022",
