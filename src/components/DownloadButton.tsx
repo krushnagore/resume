@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Download, Loader2 } from "lucide-react";
+import { Download, Loader2, Printer } from "lucide-react";
 
 export const DownloadButton = () => {
     const [isLoading, setIsLoading] = useState(false);
@@ -9,29 +9,18 @@ export const DownloadButton = () => {
     const handleDownload = async () => {
         setIsLoading(true);
         try {
-            // Dynamically import html2pdf.js
-            const html2pdf = (await import("html2pdf.js")).default;
+            const { pdf } = await import("@react-pdf/renderer");
+            const { ResumePDF } = await import("./ResumePDF");
 
-            const element = document.getElementById("resume-content");
-            if (!element) {
-                console.error("Resume content not found");
-                setIsLoading(false);
-                return;
-            }
-
-            const now = new Date();
-            const timestamp = now.toLocaleString().replace(/[/:]/g, "-").replace(/,/g, "");
-            const fileName = `Krushna Gore ${timestamp}.pdf`;
-
-            const opt = {
-                margin: [10, 10] as [number, number], // top, left, bottom, right in mm
-                filename: fileName,
-                image: { type: "jpeg", quality: 0.98 },
-                html2canvas: { scale: 2, useCORS: true },
-                jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
-            };
-
-            await html2pdf().set(opt).from(element).save();
+            const blob = await pdf(<ResumePDF />).toBlob();
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement("a");
+            link.href = url;
+            link.download = "Krushna_Gore_Resume.pdf";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
         } catch (error) {
             console.error("Error generating PDF:", error);
         } finally {
@@ -39,21 +28,36 @@ export const DownloadButton = () => {
         }
     };
 
+    const handlePrint = () => {
+        window.print();
+    };
+
     return (
-        <button
-            onClick={handleDownload}
-            disabled={isLoading}
-            className="flex items-center gap-2 bg-slate-900 text-white px-6 py-2 rounded hover:bg-slate-800 transition-colors font-medium cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed print:hidden"
-        >
-            {isLoading ? (
-                <span className="flex items-center gap-2">
-                    <Loader2 size={18} className="animate-spin" /> Generating...
-                </span>
-            ) : (
-                <span className="flex items-center gap-2">
-                    <Download size={18} /> Download CV
-                </span>
-            )}
-        </button>
+        <div className="flex items-center gap-3 print:hidden">
+            <button
+                onClick={handleDownload}
+                disabled={isLoading}
+                className="flex items-center gap-2 bg-slate-900 text-white px-5 py-2 rounded-md hover:bg-slate-800 transition-colors font-medium text-sm cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed shadow-sm"
+                title="Download ATS-Friendly PDF"
+            >
+                {isLoading ? (
+                    <>
+                        <Loader2 size={16} className="animate-spin" /> Generating PDF...
+                    </>
+                ) : (
+                    <>
+                        <Download size={16} /> Download CV (PDF)
+                    </>
+                )}
+            </button>
+
+            <button
+                onClick={handlePrint}
+                className="flex items-center gap-2 bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-300 px-4 py-2 rounded-md transition-colors font-medium text-sm cursor-pointer shadow-sm"
+                title="Print or Save via Browser"
+            >
+                <Printer size={16} /> Print
+            </button>
+        </div>
     );
 };

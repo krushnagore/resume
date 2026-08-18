@@ -2,7 +2,7 @@ export const resumeData = {
   name: "Krushna Gore",
   role: "NetSuite Technical Consultant",
   phone: "8830951740",
-  email: "krushnagore@hotmail.com",
+  email: "krushna-gore@hotmail.com",
   location: "Pune, Maharashtra",
   linkedin: "krushnagore",
   linkedinUrl: "https://www.linkedin.com/in/krushnagore",
@@ -10,10 +10,21 @@ export const resumeData = {
     "NetSuite Technical Consultant with 3+ years of expertise in SuiteScript, SuiteFlow, SDF, and SuiteApp development. Proven track record of delivering end-to-end ERP implementations and complex third-party integrations using Celigo iPaaS. Adept at automating financial, HRMS, and CRM workflows to drive operational efficiency.",
   experience: [
     {
+      company: "Indisea Software (Evogenious Tech LLP)",
+      role: "NetSuite Technical Consultant",
+      location: "Pune, Maharashtra",
+      period: "Mar 2026 – Present",
+      type: "Remote",
+      achievements: [
+        "Supporting sales tax solutions, including tax calculation engine integrations, transaction tax automation, and NetSuite–external tax system integrations.",
+        "Handled end-to-end troubleshooting, debugging, performance optimization, and production support to ensure accurate and reliable tax processing across NetSuite transactions.",
+      ],
+    },
+    {
       company: "Apex IT & Consulting Services",
       role: "NetSuite Technical Consultant",
       location: "Pune, Maharashtra",
-      period: "Aug 2025 – Present",
+      period: "Aug 2025 – Feb 2026",
       type: "Remote",
       achievements: [
         "Spearheaded complex NetSuite customizations and SOAP-based integrations to enhance system interoperability.",
